@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SouffleProfGui</title>
+
+    <link rel="stylesheet" type="text/css" href="css/jsgrid.css" />
+    <link rel="stylesheet" type="text/css" href="css/theme.css" />
+
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/db.js"></script>
+
+    <script src="js/jsgrid.core.js"></script>
+    <script src="js/jsgrid.load-indicator.js"></script>
+    <script src="js/jsgrid.load-strategies.js"></script>
+    <script src="js/jsgrid.sort-strategies.js"></script>
+    <script src="js/jsgrid.field.js"></script>
+    <script src="js/fields/jsgrid.field.text.js"></script>
+    <script src="js/fields/jsgrid.field.number.js"></script>
+    <script src="js/fields/jsgrid.field.select.js"></script>
+    <script src="js/fields/jsgrid.field.checkbox.js"></script>
+    <script src="js/fields/jsgrid.field.control.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#top").click(function() {
+                $("#view").load("views/TopView.html");
+            });
+            $("#rel").click(function() {
+                $("#view").load("views/RelView.html");
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="top" type="button">Top</button>
+<button id="rel" type="button">Relation</button>
+<div id="view"></div>
+</body>
+</html>

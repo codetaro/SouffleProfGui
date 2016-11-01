@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h3>Relations</h3>
+<div id="jsGrid_Rel"></div>
+
+<script>
+    $(function() {
+
+        $("#jsGrid_Rel").jsGrid({
+            height: "auto",
+            width: "100%",
+            filtering: true,
+            editing: false,
+            inserting: false,
+            sorting: true,
+            paging: true,
+            autoload: true,
+            pageSize: 15,
+            pageButtonCount: 5,
+            controller: {
+                loadData: function() {
+                    return db.rel;
+                }
+            },
+            fields: [
+                {name: "TOT_T", type: "number"},
+                {name: "NREC_T", type: "number"},
+                {name: "REC_T", type: "number"},
+                {name: "COPY_T", type: "number"},
+                {name: "TUPLES", type: "number"},
+                {name: "REL_NAME", type: "text"},
+                {name: "ID", type: "text"},
+                {name: "SRC", type: "text"},
+                {name: "PERFOR", type: "text"},
+                {type: "control"}
+            ]
+        });
+    });
+</script>
+</body>
+</html>
