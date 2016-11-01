@@ -14,17 +14,14 @@
         $("#jsGrid_Rul").jsGrid({
             height: "auto",
             width: "100%",
-            filtering: false,
+            filtering: true,
             editing: false,
             inserting: false,
             sorting: true,
             paging: false,
             autoload: true,
             controller: {
-                loadData: function() {
-                    return db.rul;
-                }
-                /*loadData: function(filter) {
+                loadData: function(filter) {
                     return $.grep(db.rul, function(rul) {
                         return (!filter.TOT_T || rul.TOT_T == filter.TOT_T)
                             && (!filter.NREC_T || rul.NREC_T == filter.NREC_T)
@@ -38,7 +35,7 @@
                             && (!filter.PERFOR || rul.PERFOR.indexOf(filter.PERFOR) > -1)
                             && (!filter.SRC || rul.SRC.indexOf(filter.SRC) > -1);
                     });
-                }*/
+                }
             },
             fields: [
                 {name: "TOT_T", type: "number"},

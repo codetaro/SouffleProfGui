@@ -105,7 +105,7 @@
             $("#jsGrid_Rel").jsGrid("option", $cb.attr("id"), $cb.is(":checked"));
         });
 
-        /*var selectedItems = [];
+        var selectedItems = [];
         var selectItem = function(item) {
             selectedItems.push(item);
         };
@@ -113,7 +113,7 @@
             selectedItems = $.grep(selectedItems, function(i) {
                 return i !== item;
             });
-        };*/
+        };
 
         var screenOutRules = function() {
             $("#jsGrid_Rul").jsGrid("search", {REL_NAME: selectedItems[0].REL_NAME});
