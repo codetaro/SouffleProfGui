@@ -3,7 +3,21 @@
  */
 (function() {
 
-    var db = {};
+    var db = {
+        loadData: function(filter) {
+            return $.grep(this.rel, function(rel) {
+                return (!filter.TOT_T || rel.TOT_T == filter.TOT_T)
+                    && (!filter.NREC_T || rel.NREC_T == filter.NREC_T)
+                    && (!filter.REC_T || rel.REC_T == filter.REC_T)
+                    && (!filter.COPY_T || rel.COPY_T == filter.COPY_T)
+                    && (!filter.TUPLES || rel.TUPLES == filter.TUPLES)
+                    && (!filter.REL_NAME || rel.REL_NAME.indexOf(filter.REL_NAME) > -1)
+                    && (!filter.ID || rel.ID.indexOf(filter.ID) > -1)
+                    && (!filter.SRC || rel.SRC.indexOf(filter.SRC) > -1)
+                    && (!filter.PERFOR || rel.PERFOR.indexOf(filter.PERFOR) > -1);
+            });
+        }
+    };
     window.db = db;
 
     db.overview;

@@ -9,8 +9,10 @@
 
     <link rel="stylesheet" type="text/css" href="css/jsgrid.css" />
     <link rel="stylesheet" type="text/css" href="css/theme.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />-->
 
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/db.js"></script>
 
     <script src="js/jsgrid.core.js"></script>
@@ -35,10 +37,25 @@
             });
         });
     </script>
+
+    <style>
+        .tab {
+            background-color: #e7e7e7; /* Gray */
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<button id="top" type="button">Top</button>
-<button id="rel" type="button">Relation</button>
+<button id="top" class="tab" type="button">Top</button>
+<button id="rel" class="tab" type="button">Relation</button>
 <div id="view"></div>
 </body>
 </html>
