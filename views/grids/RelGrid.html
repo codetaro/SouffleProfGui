@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<h3>Relations</h3>
+<h1>Relations</h1>
 <div id="jsGrid_Rel"></div>
 
 <script>
@@ -13,7 +13,7 @@
 
         $("#jsGrid_Rel").jsGrid({
             height: "auto",
-            width: "100%",
+            width: "90%",
             filtering: true,
             editing: false,
             inserting: false,
@@ -35,7 +35,7 @@
                 {name: "TUPLES", type: "number"},
                 {name: "REL_NAME", type: "text"},
                 {name: "ID", type: "text"},
-                {name: "SRC", type: "text"},
+                {name: "SRC", type: "text", width: "200"},
                 {name: "PERFOR", type: "text"},
                 {type: "control"}
             ]

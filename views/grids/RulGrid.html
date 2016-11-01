@@ -5,6 +5,42 @@
     <title></title>
 </head>
 <body>
-<h3>Rules of Relation</h3>
+<h1>Rules of Relation</h1>
+<div id="jsGrid_Rul"></div>
+
+<script>
+    $(function() {
+
+        $("#jsGrid_Rul").jsGrid({
+            height: "auto",
+            width: "90%",
+            filtering: false,
+            editing: false,
+            inserting: false,
+            sorting: false,
+            paging: false,
+            autoload: true,
+            controller: {
+                loadData: function() {
+                    return db.rul;
+                }
+            },
+            fields: [
+                {name: "TOT_T", type: "number"},
+                {name: "NREC_T", type: "number"},
+                {name: "REC_T", type: "number"},
+                {name: "COPY_T", type: "number"},
+                {name: "TUPLES", type: "number"},
+                {name: "RUL_NAME", type: "text", width: "200"},
+                {name: "ID", type: "text"},
+                {name: "REL_NAME", type: "text"},
+                {name: "VER", type: "number"},
+                {name: "PERFOR", type: "text"},
+                {name: "SRC", type: "text", width: "200"},
+                {type: "control"}
+            ]
+        });
+    });
+</script>
 </body>
 </html>
